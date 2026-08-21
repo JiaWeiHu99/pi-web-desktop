@@ -1,0 +1,24 @@
+1:"$Sreact.fragment"
+2:I[90484,[],"OutletBoundary"]
+3:"$Sreact.suspense"
+7:I[90484,[],"ViewportBoundary"]
+8:I[90484,[],"MetadataBoundary"]
+9:I[86869,[],"IconMark"]
+b:I[57121,[],""]
+c:I[74581,[],""]
+f:I[57788,["7177","static/chunks/app/layout-10a57808f7466a3f.js"],"PwaRegistration"]
+:HL["/_next/static/css/88714c00e109ce28.css","style"]
+:HL["/_next/static/css/d0108a26a7a2390c.css","style"]
+6:X
+e:X
+e:C
+0:{"buildId":"v7cQFUD9F5F2-WCP-4rOh","data":[{"rsc":["$","$1","c",{"children":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],null,["$","$L2",null,{"children":["$","$3",null,{"name":"Next.MetadataOutlet","children":"$@4"}]}]]}],"isPartial":"$@5","staleTime":"$6","varyParams":null},{"rsc":["$","$1","h",{"children":[["$","meta",null,{"name":"robots","content":"noindex"}],["$","$L7",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content"}],["$","meta","2",{"name":"theme-color","content":"#ffffff","media":"(prefers-color-scheme: light)"}],["$","meta","3",{"name":"theme-color","content":"#1a1a1a","media":"(prefers-color-scheme: dark)"}]]}],["$","div",null,{"hidden":true,"children":["$","$L8",null,{"children":["$","$3",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Pi Web"}],["$","meta","1",{"name":"description","content":"Pi Web interface for the pi coding agent"}],["$","meta","2",{"name":"application-name","content":"Pi Web"}],["$","link","3",{"rel":"manifest","href":"/manifest.webmanifest"}],["$","meta","4",{"name":"format-detection","content":"telephone=no"}],["$","meta","5",{"name":"mobile-web-app-capable","content":"yes"}],["$","meta","6",{"name":"apple-mobile-web-app-title","content":"Pi Web"}],["$","meta","7",{"name":"apple-mobile-web-app-status-bar-style","content":"black-translucent"}],["$","link","8",{"rel":"icon","href":"/favicon.ico?8aa486c701a3d218","type":"image/x-icon","sizes":"512x512"}],["$","link","9",{"rel":"icon","href":"/icons/icon-192.png","sizes":"192x192","type":"image/png"}],["$","link","10",{"rel":"apple-touch-icon","href":"/icons/apple-touch-icon.png","sizes":"180x180","type":"image/png"}],["$","$L9","11",{}]]}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"isPartial":"$@a","staleTime":"$6","varyParams":null},{"rsc":["$","$1","c",{"children":[null,["$","$Lb",null,{"parallelRouterKey":"children","template":["$","$Lc",null,{}]}]]}],"isPartial":"$@d","staleTime":"$6","varyParams":"$e"},{"rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/88714c00e109ce28.css","precedence":"next"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/d0108a26a7a2390c.css","precedence":"next"}]],["$","html",null,{"lang":"en","translate":"no","className":"__variable_66b8ca notranslate","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","meta",null,{"name":"google","content":"notranslate"}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(function(){try{var t=localStorage.getItem(\"pi-theme\");var dark=t===\"dark\"||((t==null||t===\"\"||t===\"auto\")&&window.matchMedia(\"(prefers-color-scheme: dark)\").matches);if(dark)document.documentElement.classList.add(\"dark\")}catch(e){}})();"}}]]}],["$","body",null,{"translate":"no","className":"notranslate","suppressHydrationWarning":true,"children":[["$","$Lb",null,{"parallelRouterKey":"children","template":["$","$Lc",null,{}]}],["$","$Lf",null,{}]]}]]}]]}],"isPartial":"$@10","staleTime":"$6","varyParams":null}],"isUpgradeableISRFallback":false,"a":"$@11","rootVaryParams":null,"needsRuntimeRequest":"$@12"}
+4:null
+6:300
+12:true
+6:C
+11:0
+a:"$undefined"
+d:"$undefined"
+10:"$undefined"
+5:"$undefined"

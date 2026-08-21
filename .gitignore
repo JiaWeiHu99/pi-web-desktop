@@ -1,0 +1,24 @@
+# 依赖
+node_modules/
+server/node_modules/
+
+# 构建产物
+dist/
+dist-win-unpacked/
+
+# Next.js 缓存(server/.next 主体保留, 缓存不入库)
+server/.next/cache/
+server/.next/dev/
+
+# 日志与临时文件
+*.log
+*.pid
+
+# 系统文件
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# 编辑器
+.vscode/
+.idea/

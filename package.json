@@ -1,0 +1,65 @@
+{
+  "name": "pi-web-desktop",
+  "version": "0.1.0",
+  "description": "Pi Web 桌面版 — pi coding agent 的本地桌面客户端",
+  "author": "pi-web-desktop",
+  "license": "MIT",
+  "main": "main.js",
+  "scripts": {
+    "postinstall": "cd server && npm install --omit=dev --no-audit --no-fund",
+    "start": "electron .",
+    "dist": "electron-builder --win",
+    "dist:portable": "electron-builder --win portable",
+    "dist:nsis": "electron-builder --win nsis"
+  },
+  "devDependencies": {
+    "electron": "39.8.10",
+    "electron-builder": "^26.0.0"
+  },
+  "build": {
+    "appId": "dev.piweb.desktop",
+    "productName": "Pi Web",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "main.js",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "./server",
+        "to": "pi-web",
+        "filter": [
+          "**/*",
+          "!**/*.map",
+          "!**/.next/cache/**",
+          "!**/.next/dev/**",
+          "!**/node_modules/**"
+        ]
+      },
+      {
+        "from": "./server/node_modules",
+        "to": "pi-web/node_modules",
+        "filter": ["**/*"]
+      }
+    ],
+    "win": {
+      "target": [
+        "portable",
+        "nsis"
+      ],
+      "icon": "build/icon.ico"
+    },
+    "portable": {
+      "artifactName": "PiWeb-${version}-portable.exe"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "artifactName": "PiWeb-${version}-setup.exe"
+    }
+  }
+}
