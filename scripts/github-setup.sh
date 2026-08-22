@@ -31,7 +31,7 @@ RELEASE_BODY='## Pi Web Desktop v0.1.0
 - 端口自适应, 单实例锁, 外部链接走系统浏览器
 
 ### 下载
-- PiWeb-0.1.0-portable.exe — 免安装单文件版
+- PiWeb-0.1.0-win.zip — 绿色版, 解压即用
 - PiWeb-0.1.0-setup.exe — NSIS 安装版
 
 > 上游项目 [pi-web](https://github.com/agegr/pi-web): Local browser UI for the pi coding agent'
