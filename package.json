@@ -9,8 +9,8 @@
     "postinstall": "cd server && npm install --omit=dev --no-audit --no-fund",
     "start": "electron .",
     "dist": "electron-builder --win",
-    "dist:portable": "electron-builder --win portable",
-    "dist:nsis": "electron-builder --win nsis"
+    "dist:nsis": "electron-builder --win nsis",
+    "dist:zip": "electron-builder --win zip"
   },
   "devDependencies": {
     "electron": "39.8.10",
@@ -42,7 +42,9 @@
       {
         "from": "./server/node_modules",
         "to": "pi-web/node_modules",
-        "filter": ["**/*"]
+        "filter": [
+          "**/*"
+        ]
       }
     ],
     "win": {

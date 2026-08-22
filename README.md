@@ -35,7 +35,7 @@ npm install
 # 2. 开发模式启动
 npm start
 
-# 3. 打包(portable + NSIS)
+# 3. 打包(NSIS 安装版 + zip 绿色版)
 npm run dist
 ```
 
@@ -67,8 +67,8 @@ pi-web-desktop/
 | 命令 | 作用 |
 | --- | --- |
 | `npm start` | 开发模式启动(服务目录默认 `./server`) |
-| `npm run dist` | 打包 portable + NSIS |
-| `npm run dist:portable` | 仅打单文件版 |
+| `npm run dist` | 打包 NSIS 安装版 + zip 绿色版 |
+| `npm run dist:zip` | 仅打 zip 绿色版 |
 | `npm run dist:nsis` | 仅打安装版 |
 
 ### 环境变量

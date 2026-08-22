@@ -1,6 +1,5 @@
 # 全量清理: Pi Web 相关残留
 Get-Process -Name "Pi Web" -ErrorAction SilentlyContinue | Stop-Process -Force
-Get-Process -Name "PiWeb-0.1.0-portable" -ErrorAction SilentlyContinue | Stop-Process -Force
 Start-Sleep -Seconds 2
 
 # 失效快捷方式(指向已不存在的目录)
