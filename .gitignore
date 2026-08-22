@@ -22,3 +22,6 @@ Desktop.ini
 # 编辑器
 .vscode/
 .idea/
+
+# 本地实拍截图(审阅后如需公开, 删除下面这行再提交)
+docs/screenshot-local.png
