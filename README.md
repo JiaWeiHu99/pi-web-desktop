@@ -8,17 +8,26 @@
 
 ## 快速使用
 
-### 直接下载使用(推荐)
+### 推荐:安装版(双击 setup.exe)
 
-从 [Releases](https://github.com/JiaWeiHu99/pi-web-desktop/releases) 下载:
+从 [Releases](https://github.com/JiaWeiHu99/pi-web-desktop/releases) 下载 `PiWeb-*-setup.exe`,双击后:
 
-```
-PiWeb-0.1.0-portable.exe   免安装单文件,双击即用
-PiWeb-0.1.0-setup.exe      NSIS 安装版(可自选安装目录)
-```
+1. 出现安装向导,点 **下一步 → 安装**
+2. 完成后桌面/开始菜单生成 **Pi Web** 快捷方式
+3. 之后每次启动都是秒开,没有解压等待
 
-- 首次启动需 1-3 分钟解压内置运行时(视磁盘速度),之后秒开
-- 数据与 pi 终端版完全互通(会话、模型配置都在 `~/.pi/agent`)
+### 备用:免安装单文件版(双击 portable.exe)
+
+下载 `PiWeb-*-portable.exe` 直接双击即可。
+
+> ⚠️ **注意**:portable 版每次启动都要把内置运行时解压到临时目录(约 90 秒),期间**没有任何界面提示**,看起来像"没反应",属正常现象,请耐心等待。
+
+### 常见问题:双击后"没反应"
+
+1. **先看任务栏/系统托盘** —— 应用可能已经在运行(单实例锁会让重复启动直接退出)
+2. **portable 版请等待 90 秒** —— 首次解压无界面提示
+3. 如果仍然不行,打开任务管理器确认没有残留的 `Pi Web` 进程,再重试
+4. 服务日志在 `%APPDATA%\pi-web-desktop\pi-web-server.log`,可用来排查
 
 ### 从源码构建
 

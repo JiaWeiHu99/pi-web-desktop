@@ -53,7 +53,8 @@
       "icon": "build/icon.ico"
     },
     "portable": {
-      "artifactName": "PiWeb-${version}-portable.exe"
+      "artifactName": "PiWeb-${version}-portable.exe",
+      "unpackDirName": "pi-web-desktop"
     },
     "nsis": {
       "oneClick": false,
