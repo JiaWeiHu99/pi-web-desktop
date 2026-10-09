@@ -1,0 +1,54 @@
+name: Build macOS
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Resolve version
+        id: ver
+        shell: bash
+        run: |
+          if [ "${GITHUB_REF_TYPE}" = "tag" ]; then
+            echo "value=${GITHUB_REF_NAME#v}" >> "$GITHUB_OUTPUT"
+          else
+            echo "value=0.0.0-dev" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Build Pi Web.app (universal + zip)
+        shell: bash
+        run: |
+          cd mac
+          VERSION="${{ steps.ver.outputs.value }}" UNIVERSAL=1 ZIP=1 ./build.sh
+
+      - name: Verify bundle
+        shell: bash
+        run: |
+          cd mac
+          plutil -lint "Pi Web.app/Contents/Info.plist"
+          codesign --verify --verbose "Pi Web.app"
+          echo "架构: $(lipo -archs "Pi Web.app/Contents/MacOS/Pi Web")"
+          echo "版本: $(plutil -extract CFBundleShortVersionString raw "Pi Web.app/Contents/Info.plist")"
+          ls -lh dist/
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist-macos
+          path: mac/dist/*.zip
+          retention-days: 14
+
+      - name: Publish release
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: mac/dist/*.zip
+          generate_release_notes: true
