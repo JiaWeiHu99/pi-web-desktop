@@ -18,6 +18,16 @@ if [ "${UNIVERSAL:-0}" = "1" ]; then
     echo "==> 通用二进制模式 (arm64 + x86_64)"
 fi
 
+# 版本号优先级: VERSION 环境变量(CI 传 Release tag) > 仓库根 package.json > build/Info.plist 内置默认值
+# 发布时版本号唯一真源是 Release tag(与 Windows 工作流一致); 本地无 VERSION 时跟随根 package.json,
+# 避免同一仓库里 mac 本地与 Windows 版本号各说各话。
+if [ -z "${VERSION:-}" ] && [ -f ../package.json ]; then
+    VERSION="$(python3 -c 'import json;print(json.load(open("../package.json"))["version"])' 2>/dev/null || true)"
+    if [ -n "$VERSION" ]; then
+        echo "==> 版本号(取自 ../package.json): $VERSION"
+    fi
+fi
+
 echo "==> 1/4 生成图标"
 python3 build/icon.py build/AppIcon.iconset
 iconutil -c icns build/AppIcon.iconset -o build/AppIcon.icns

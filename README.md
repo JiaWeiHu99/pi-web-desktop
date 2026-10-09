@@ -130,8 +130,17 @@ git tag v1.0.0 && git push origin v1.0.0
 
 | 工作流 | 运行环境 | 产物 |
 | --- | --- | --- |
-| `.github/workflows/build.yml` | `windows-latest` | `PiWeb-*-setup.exe`、`PiWeb-*-win.zip` |
-| `.github/workflows/build-macos.yml` | `macos-latest` | `PiWeb-*-macos.zip` |
+| `.github/workflows/build.yml` | `windows-latest` | `PiWeb-<版本>-setup.exe`、`PiWeb-<版本>-win.zip` |
+| `.github/workflows/build-macos.yml` | `macos-latest` | `PiWeb-<版本>-macos.zip` |
+
+### 版本号规则
+
+**Release tag 是两个平台唯一的版本真源**，不用手改任何文件里的版本号：
+
+- `v1.0.0` → 两端产物均为 `1.0.0`：`PiWeb-1.0.0-setup.exe` / `PiWeb-1.0.0-win.zip` / `PiWeb-1.0.0-macos.zip`
+- Windows：工作流在 `npm ci` 之后用 `npm version <tag> --no-git-tag-version` 覆盖，electron-builder 据此命名（仓库内 `package.json` 的 `0.1.0` 只是本地开发默认值）
+- macOS：工作流把 tag 传给 `mac/build.sh` 的 `VERSION`，覆盖 App 内的 `CFBundleShortVersionString`/`CFBundleVersion`
+- 手动触发（非 tag）时两端都用 `0.0.0-dev`；本地构建 mac 时不传 `VERSION` 则跟随仓库根 `package.json`
 
 ## 说明
 

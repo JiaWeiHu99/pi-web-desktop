@@ -65,6 +65,7 @@ cd mac
 ./build.sh                 # 按本机架构构建，需要 clang + python3 + iconutil + codesign（macOS 自带/CLT）
 UNIVERSAL=1 ./build.sh     # arm64 + x86_64 通用二进制（CI 用这个）
 ZIP=1 ./build.sh           # 额外产出 dist/PiWeb-<版本>-macos.zip
+VERSION=1.2.3 ./build.sh   # 覆盖 App 版本号(CI 传 Release tag;不传时跟随仓库根 package.json)
 
 # 开发自测: 在沙箱目录里演练「暂存安装 → 原子切换」(不弹窗/不起服务/不碰 ~/.pi-web)
 "Pi Web.app/Contents/MacOS/Pi Web" --selftest-swap /tmp/sandbox/.pi-web @agegr/pi-web@latest

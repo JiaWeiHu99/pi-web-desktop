@@ -13,6 +13,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # 版本号唯一真源 = Release tag (v1.2.3 -> 1.2.3)；手动触发时用 0.0.0-dev。
+      # 与 Windows 工作流(build.yml)保持同一套版本号规则，同一 tag 下两端产物号一致。
       - name: Resolve version
         id: ver
         shell: bash
