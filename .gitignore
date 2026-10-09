@@ -6,6 +6,10 @@ server/node_modules/
 dist/
 dist-win-unpacked/
 
+# macOS 客户端构建产物(源码在 mac/, 产物由 mac/build.sh 生成)
+mac/Pi Web.app/
+mac/build/AppIcon.iconset/
+
 # Next.js 缓存(server/.next 主体保留, 缓存不入库)
 server/.next/cache/
 server/.next/dev/
